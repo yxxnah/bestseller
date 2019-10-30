@@ -6,11 +6,11 @@ from urllib.parse import urljoin
 from urllib.parse import unquote
 from bestseller.items import BestsellerItem
 
-# 주간 베스트셀러 수집 클래스
+# 스테디셀러 수집 클래스
 class scrapWeekly(scrapy.Spider):
     name = "bestseller"
     start_urls = [
-      'https://ridibooks.com/bestsellers/general',
+      'https://ridibooks.com/bestsellers/general?order=steady',
     ]
 
     def parse(self, response):

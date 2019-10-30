@@ -17,10 +17,10 @@ NEWSPIDER_MODULE = 'bestseller.spiders'
 # 한글 인코딩 설정 (없으면 한글 깨짐)
 FEED_EXPORT_ENCODING = 'utf-8'
 
-# Pipeline 설정 (DB 관련)
-# ITEM_PIPELINES = {'bestseller.pipelines.MongoDBPipeline': 300}
-
+# Pipeline 설정 (mongoDB)
+ITEM_PIPELINES = {'bestseller.pipelines.MongoDBPipeline': 300}
 DOWNLOADER_MIDDLEWARES = {'bestseller.middlewares.BestsellerDownloaderMiddleware': 900}
+
 # Mongodb 관련 설정
 MONGO_URI = 'mongodb://localhost:27017'
 MONGO_DB = 'bestseller'
